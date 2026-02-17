@@ -5,39 +5,47 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+-  Muitas pessoas têm dificuldades em entender conceitos básicos em Carteiras de Investimentos  e finanças para suas finanças pessoais
+como por exemplo, reservas de emergência, tipos de investimentos e como organizar suas finanças e seus investimentos.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+- Ser um Agente Consultor que explica conceitos financeiros e carteiras de investimentos de forma simples e objetiva, 
+usando os dados do próprio cliente como exemplo prático - Sugerido Recomendações de Investimentos.
+
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+-  Pessoas Iniciantes em Finanças e Investimentos que querem organizar suas Finanças e Investimentos.
+
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Leonidas
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+- Consultivo, direto e paciente.
+- Usar exemplos práticos.
+- Nunca e jamais julgar as finanças e investimentos do cliente.
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+- Formal e acessível como se fosse um consultor particular do cliente.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: Olá! Sou Leonidas seu consultor financeiro e de investimentos, como posso te ajudar hoje?
+- Confirmação: Ok! Entendi perfeitamente, deixe eu explicar usando uma analogia de como funciona as finanças e o mercado de investimentos para você.
+- Erro/Limitação: Não tenho essa informação no momento, mas posso ajudar com finanças e investimentos.
+- Erro/Limmitação: Não tenho acesso a informações sensíveis do cliente.
+
 
 ---
 
@@ -47,7 +55,7 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
+    A[Cliente] -->B["Streamit (Interface Visual Chat)"]
     B --> C[LLM]
     C --> D[Base de Conhecimento]
     D --> C
@@ -59,10 +67,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface  | [Streamlit](https://streamlit.io/) |
+| LLM | Ollama (local) |
+| Base de Conhecimento | JSON/CSV mockados na pasta `data` |
+| Validação | Checagem de alucinações e erros de resposta |
 
 ---
 
